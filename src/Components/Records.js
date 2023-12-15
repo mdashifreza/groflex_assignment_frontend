@@ -10,7 +10,7 @@ export default function Records() {
         const recordsDetails = async () => {
             try{
                 const response = await axios.get(url);
-                console.log("record:", response.data)
+                // console.log("record:", response.data)
                 setRecords(response.data);
             }
             catch(error){

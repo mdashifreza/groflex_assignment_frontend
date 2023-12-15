@@ -20,7 +20,7 @@ const SignUp = () => {
         e.preventDefault();
         try{
             const response = await axios.post('http://localhost:9873/api/signup', formData)
-            console.log('Signup successful:', response.data);
+            // console.log('Signup successful:', response.data);
             navigate('/signin')
         }
         catch (error){

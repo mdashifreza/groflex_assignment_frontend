@@ -17,7 +17,7 @@ const ForgotPassword = ({ onClose }) => {
         e.preventDefault();
         try {
         const response = await axios.post("http://localhost:9873/api/reset-password", resetData);
-        console.log("rewsponse data", response.data)
+        // console.log("rewsponse data", response.data)
         onClose();
         }
         catch (error) {

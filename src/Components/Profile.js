@@ -14,7 +14,7 @@ export default function Profile() {
         const fetchRegistrationData = async () => {
             try {
                 const response = await axios.get('http://localhost:9873/api/registrations');
-                console.log("checking", response.data)
+                // console.log("checking", response.data)
                 setRegistrationData(response.data);
             } catch (error) {
                 console.error('Error fetching registration data:', error);
@@ -25,7 +25,7 @@ export default function Profile() {
 
     const onDelete = async (registrationId) => {
         try {
-            await axios.delete(`http://localhost:8080/api/registrations/${registrationId}`);
+            await axios.delete(`https://groflex-assignment.vercel.app/api/registrations/${registrationId}`);
             setRegistrationData((prevData) =>
                 prevData.filter((registration) => registration._id !== registrationId)
             );
@@ -35,7 +35,7 @@ export default function Profile() {
     };
 
     const onEdit = async (registrationId) => {
-        const response = await axios.put(`http://localhost:8080/api/registrations/${registrationId}`);
+        const response = await axios.put(`https://groflex-assignment.vercel.app/api/registrations/${registrationId}`);
         // Implement your edit logic
     };
 

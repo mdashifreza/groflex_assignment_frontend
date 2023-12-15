@@ -5,7 +5,7 @@ import { useNavigate, useParams, Link } from 'react-router-dom';
 
 const RegistrationForm = () => {
     const {username} = useParams();
-    console.log("props from signin in page", username);
+    // console.log("props from signin in page", username);
 
     const navigate = useNavigate();
     const [formData, setFormData] = useState({
@@ -46,8 +46,8 @@ const RegistrationForm = () => {
     const handleSubmit = async(e) => {
         e.preventDefault();
         try{
-            const response = await axios.post(`http://localhost:8080/api/register/${username}`, formData);
-            console.log('Registration successful:', response.data);
+            const response = await axios.post(`https://groflex-assignment.vercel.app/api/register/${username}`, formData);
+            // console.log('Registration successful:', response.data);
             navigate('/profile', { state: { username } })
         }
         catch (error){
