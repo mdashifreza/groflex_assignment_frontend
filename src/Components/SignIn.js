@@ -34,7 +34,7 @@ const SignIn = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:8080/api/login',formData);
+      const response = await axios.post('https://groflex-assignment.vercel.app/api/login',formData);
       const { username } = formData;
       navigate(`/registration/${username}`);
     } catch (error) {
