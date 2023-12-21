@@ -19,7 +19,7 @@ const SignUp = () => {
     const handleSubmit = async(e) => {
         e.preventDefault();
         try{
-            const response = await axios.post('http://localhost:9873/api/signup', formData)
+            const response = await axios.post('https://groflex-assignment.vercel.app/api/signup', formData)
             // console.log('Signup successful:', response.data);
             navigate('/signin')
         }
